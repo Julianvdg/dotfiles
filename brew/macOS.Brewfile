@@ -51,7 +51,6 @@ cask "google-chrome"
 # can be removed if media keys started working like they should again
 cask "highsierramediakeyenabler"
 cask "iterm2"
-cask "microsoft-office"
 cask "postico"
 cask "postman"
 cask "sequel-pro"
