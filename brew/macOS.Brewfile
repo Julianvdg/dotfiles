@@ -37,8 +37,8 @@ brew "yarn"
 brew "youtube-dl"
 brew "z"
 brew "heroku/brew/heroku"
-brew "install zsh"
-brew "install getantibody/tap/antibody"
+brew "zsh"
+brew "getantibody/tap/antibody"
 
 ##################### cask #####################
 cask "dashlane"
