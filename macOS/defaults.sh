@@ -36,12 +36,12 @@ function configure_chrome() {
 
 function configure_dock() {
     quit "Dock"
-    # Set the icon size of Dock items to 36 pixels
-    defaults write com.apple.dock tilesize -int 36
+    # Set the icon size of Dock items to 48 pixels
+    defaults write com.apple.dock tilesize -int 48
     # Wipe all (default) app icons from the Dock
     defaults write com.apple.dock persistent-apps -array
     # Show only open applications in the Dock
-    defaults write com.apple.dock static-only -bool true
+    defaults write com.apple.dock static-only -bool false
     # Don’t animate opening applications from the Dock
     defaults write com.apple.dock launchanim -bool false
     # Disable Dashboard
@@ -49,7 +49,7 @@ function configure_dock() {
     # Don’t show Dashboard as a Space
     defaults write com.apple.dock dashboard-in-overlay -bool true
     # Automatically hide and show the Dock
-    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock autohide -bool false
     # Remove the auto-hiding Dock delay
     defaults write com.apple.dock autohide-delay -float 0
     # Disable the Launchpad gesture (pinch with thumb and three fingers)
@@ -68,7 +68,7 @@ function configure_dock() {
     ## 11: Launchpad
     ## 12: Notification Center
     ## Top left screen corner → Mission Control
-    defaults write com.apple.dock wvous-tl-corner -int 2
+    defaults write com.apple.dock wvous-tl-corner -int 0
     defaults write com.apple.dock wvous-tl-modifier -int 0
     ## Top right screen corner → Desktop
     defaults write com.apple.dock wvous-tr-corner -int 0
@@ -111,8 +111,8 @@ function configure_finder() {
     defaults write com.apple.frameworks.diskimages \
         skip-verify-remote -bool true
     # Use list view in all Finder windows by default
-    # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+    # Four-letter codes for theview modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
+    defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
     # Disable the warning before emptying the Trash
     defaults write com.apple.finder WarnOnEmptyTrash -bool false
 }

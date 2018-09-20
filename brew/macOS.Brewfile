@@ -39,6 +39,7 @@ brew "z"
 brew "heroku/brew/heroku"
 brew "zsh"
 brew "getantibody/tap/antibody"
+brew "terminal-notifier"
 
 ##################### cask #####################
 cask "dashlane"
