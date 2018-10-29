@@ -37,7 +37,7 @@ antibody bundle zsh-users/zsh-history-substring-search
 antibody bundle zsh-users/zsh-completions
 antibody bundle marzocchi/zsh-notify
 antibody bundle buonomo/yarn-completion
-antibody bundle robbyrussell/oh-my-zsh folder:plugins/git
+antibody bundle robbyrussell/oh-my-zsh path:plugins/git
 
 # Keybindings
 bindkey '^[[A' history-substring-search-up

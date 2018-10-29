@@ -40,6 +40,11 @@ brew "heroku/brew/heroku"
 brew "zsh"
 brew "getantibody/tap/antibody"
 brew "terminal-notifier"
+brew "httpd"
+brew "openldap"
+brew "libiconv"
+brew "php@5.6"
+brew "php@7.2"
 
 ##################### cask #####################
 cask "dashlane"
@@ -49,19 +54,17 @@ cask "dropbox"
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "google-chrome"
-# can be removed if media keys started working like they should again
-cask "highsierramediakeyenabler"
 cask "iterm2"
 cask "postico"
 cask "postman"
 cask "sequel-pro"
 cask "spotify"
 
-##################### mas #####################
-mas "Amphetamine", id: 937984704
-mas "Affinity Photo", id: 824183456
-mas "Magnet", id: 441258766
-mas "Airmail",id: 918858936
-mas "Toolbox for Keynote -Templates", id: 582635628
-mas "Toolbox for Pages - Templates", id: 571654652
-mas "Quiver", id: 866773894
+##################### mas ##################### (DISABLED BECAUSE OF MACOS MOJAVE)
+# mas "Amphetamine", id: 937984704
+# mas "Affinity Photo", id: 824183456
+# mas "Magnet", id: 441258766
+# mas "Airmail",id: 918858936
+# mas "Toolbox for Keynote -Templates", id: 582635628
+# mas "Toolbox for Pages - Templates", id: 571654652
+# mas "Quiver", id: 866773894

@@ -30,6 +30,8 @@ main() {
     # and prettier so that Neoformat can auto-format files
     yarn_packages=(prettier typescript)
     yarn_install "${yarn_packages[@]}"
+    # Setting up Apache
+#    setup_apache
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
     # Setting up Vim
@@ -179,6 +181,15 @@ function pull_latest() {
     else
         error "Please pull the latest changes in ${1} repository manually."
     fi
+}
+
+function setup_apache() {
+    info "Setting up Apache..."
+    sudo apachectl stop &>/dev/null;
+    sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null;
+    sudo brew services start httpd
+    symlink "httpd" ${DOTFILES_REPO}/apache/httpd.conf /usr/local/etc/httpd/httpd.conf
+    sudo apachectl -k restart &>/dev/null;
 }
 
 function setup_vim() {
@@ -336,7 +347,6 @@ function update_login_items() {
     login_item /Applications/Docker.app
     login_item /Applications/Dropbox.app
     login_item /Applications/iTerm.app
-    login_item /Applications/HighSierraMediaKeyEnabler.app
     login_item /Applications/Dashlane.app
     success "Login items successfully updated."
 }
